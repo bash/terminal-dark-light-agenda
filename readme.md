@@ -17,9 +17,12 @@
 | VSCode (xterm.js) | yes     | `rgb:ffff/ffff/ffff` | `rgb:ffff/ffff/ffff` | 7.96848ms    | `xterm-256color` | `vscode`          | yes                    | 1.85.1 (macOS)             |
 | iSH (hterm)       | yes     | no                   | no                   | -            | `xterm-256color` | no                | no                     | 1.3.2 (Build 494) (iOS)    |
 | IntelliJ IDEA     | yes     | `rgb:ffff/ffff/ffff` | `rgb:ffff/ffff/ffff` | 53.284µs     | `xterm-256color` | no [^1]           | no                     | PyCharm 2023.3.2 (macOS)   |
+| [Contour]         | yes     | `rgb:ffff/ffff/ffff` | `rgb:ffff/ffff/ffff` | 25.833µs     | `contour` [^2]   | no [^3]           | no [^4]                | 0.4.1.6292 (macOS)         |
 
-
-[^1]: But it set's `TERMINAL_EMULATOR=JetBrains-JediTerm` instead.
+[^1]: But it sets `TERMINAL_EMULATOR=JetBrains-JediTerm` instead.
+[^2]: But it provides a terminfo entry by adding `TERMINFO_DIRS`.
+[^3]: But it sets `TERMINAL_NAME=contour` instead.
+[^4]: But it sets `TERMINAL_VERSION_STRING` and `TERMINAL_VERSION_TRIPLE` instead.
 
 ## Terminals to Test
 * [x] macOS Terminal
@@ -48,3 +51,6 @@
 * [Serverfault answer for measuring latency](https://serverfault.com/a/977082)
 * [iterm2 Proprietary Escape Codes](https://iterm2.com/documentation-escape-codes.html)
 * [Awesome Terminal](https://github.com/cdleon/awesome-terminals)
+
+
+[Contour]: https://contour-terminal.org/
