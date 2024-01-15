@@ -25,11 +25,16 @@
 | [foot]                | yes     | `rgb:ffff/ffff/ffff` | `rgb:ffff/ffff/ffff` | 15.025µs     | `foot`           | no                | no                     | 1.16.1                     |
 | xterm                 | yes     | `rgb:ffff/ffff/ffff` | `rgb:ffff/ffff/ffff` | 18.9µs       | `xterm-256color` | no                | no                     | 385                        |
 | Linux console         | yes     | no                   | no                   | 4.073µs      | `linux`          | no                | no                     | -                          |
+| Windows Terminal      | yes     | no                   | no                   | -            | no [^5]          | no                | no                     | 1.18.3181.0                |
+| Windows Console Host  | yes     | no                   | no                   | -            | no               | no                | no                     | Windows 10.0.22631.2428    |
+| PuTTY                 | yes     | no                   | no                   | -            | -                | -                 | -                      | 0.80                       |
+
 
 [^1]: But it sets `TERMINAL_EMULATOR=JetBrains-JediTerm` instead.
 [^2]: But it provides a terminfo entry by adding `TERMINFO_DIRS`.
 [^3]: But it sets `TERMINAL_NAME=contour` instead.
 [^4]: But it sets `TERMINAL_VERSION_STRING` and `TERMINAL_VERSION_TRIPLE` instead.
+[^5]: But it can be recognized by `WT_SESSION` instead.
 
 ## Terminals to Test
 * [x] macOS Terminal
@@ -40,9 +45,9 @@
 * [x] IntelliJ IDEA
 * [x] JetBrains Fleet
 * [x] iSH (hterm)
-* Windows Terminal
-* Old Windows conhost.exe
-* PuTTY
+* [x] Windows Terminal
+* [x] Old Windows conhost.exe
+* [x] PuTTY
 * `screen`
 * `tmux`
 * Others from https://github.com/dalance/termbg
