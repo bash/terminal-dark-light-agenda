@@ -35,6 +35,7 @@
 * PuTTY
 * `screen`
 * `tmux`
+* Others from https://github.com/dalance/termbg
 
 ## Supported Terminal Sequences
 * [xterm.js](https://xtermjs.org/docs/api/vtfeatures)
