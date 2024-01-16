@@ -67,6 +67,8 @@
 * [Serverfault answer for measuring latency](https://serverfault.com/a/977082)
 * [iterm2 Proprietary Escape Codes](https://iterm2.com/documentation-escape-codes.html)
 * [Awesome Terminal](https://github.com/cdleon/awesome-terminals)
+* [Support querying the colors via OSC ](https://github.com/microsoft/terminal/issues/3718) has some interesting insights.
+* [Feature reporting revamp](https://gitlab.freedesktop.org/terminal-wg/specifications/-/issues/8) has interesting insights on the problems with asynchronous responses.
 
 
 [Contour]: https://contour-terminal.org/
