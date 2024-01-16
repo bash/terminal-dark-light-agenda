@@ -28,9 +28,10 @@
 | Windows Terminal      | yes     | no                   | no                   | -            | no [^5]          | no                | no                     | 1.18.3181.0                |
 | Windows Console Host  | yes     | no                   | no                   | -            | no               | no                | no                     | Windows 10.0.22631.2428    |
 | PuTTY                 | yes     | no                   | no                   | -            | -                | -                 | -                      | 0.80                       |
-| Hyper                 | yes     | no?                  | no?                  | -            | `xterm-256color` | `Hyper`           | yes                    | 3.4.1                      |
+| Hyper                 | yes     | yes                  | yes                  | 18.883401ms  | `xterm-256color` | `Hyper`           | yes                    | 3.4.1 (macOS)              |
 | ConEmu / Cmder        | yes     | no                   | no                   | -            | -                | -                 | -                      | 230724 stable              |
 | Mintty                | yes     | `rgb:ffff/ffff/ffff` | `rgb:ffff/ffff/ffff` | -            | `xterm`          | `mintty`          | yes                    | 3.6.1                      |
+
 
 [^1]: But it sets `TERMINAL_EMULATOR=JetBrains-JediTerm` instead.
 [^2]: But it provides a terminfo entry by adding `TERMINFO_DIRS`.
