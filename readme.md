@@ -71,6 +71,14 @@
 * [Support querying the colors via OSC ](https://github.com/microsoft/terminal/issues/3718) has some interesting insights.
 * [Feature reporting revamp](https://gitlab.freedesktop.org/terminal-wg/specifications/-/issues/8) has interesting insights on the problems with asynchronous responses.
 
+## Impl Resources
+* [Example impl on how to acquire TTY](https://gist.github.com/bash/51f95bf86781564ff6b8cee3422e217d)
+* [Console Screen Buffers (Windows)](https://learn.microsoft.com/en-us/windows/console/console-screen-buffers#character-attributes)
+* [Console Handles (Windows)](https://learn.microsoft.com/en-us/windows/console/console-handles)
+
+## Delta
+* [Previous PR](https://github.com/dandavison/delta/pull/1493)
+* [Issue](https://github.com/dandavison/delta/issues/447)
 
 [Contour]: https://contour-terminal.org/
 [QTerminal]: https://github.com/lxqt/qterminal
