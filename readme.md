@@ -14,7 +14,7 @@ jumping off point to the different PRs / issues.
 * (WIP) [bat]: [`dark-light` Branch](https://github.com/bash/bat/tree/dark-light)
 * (Issue) [Terminology]: [Responses to Queries for the Foreground and Background Color Use Different Format][terminology-issue]
 
-
+[bat]: https://github.com/sharkdp/bat
 [delta]: https://github.com/dandavison/delta
 [delta-pr]: https://github.com/dandavison/delta/pull/1615
 [terminal-colorsaurus]: https://github.com/bash/terminal-colorsaurus
