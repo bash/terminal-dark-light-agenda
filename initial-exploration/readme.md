@@ -1,3 +1,9 @@
+> [!NOTE]
+> These documents are from my original exploration into this topic.
+> Much more complete and thorough results can be found in the terminal-colorsaurus repository:
+> * [Terminal Survey](https://github.com/bash/terminal-colorsaurus/blob/main/doc/terminal-survey.md)
+> * [Latency Measurements](https://github.com/bash/terminal-colorsaurus/blob/main/doc/latency.md)
+
 ## Goals
 * [ ] Survey Terminals if they support my latency measuring trick (`printf '\e[c'`)
 * [ ] Survey Terminals if they support reading the foreground and background color
