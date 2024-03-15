@@ -10,11 +10,14 @@ jumping off point to the different PRs / issues.
 * [terminal-trx]: A Rust library that provides a readable and writable handle to the current tty.
 
 ## Contributions
-* [delta]: [Detect Dark/Light Mode from Terminal][delta-pr]
-* **WIP** [bat]: [`dark-light` Branch](https://github.com/bash/bat/tree/dark-light)
+* (PR) [delta]: [Detect Dark/Light Mode from Terminal][delta-pr]
+* (WIP) [bat]: [`dark-light` Branch](https://github.com/bash/bat/tree/dark-light)
+* (Issue) [Terminology]: [Responses to Queries for the Foreground and Background Color Use Different Format][terminology-issue]
 
 
 [delta]: https://github.com/dandavison/delta
 [delta-pr]: https://github.com/dandavison/delta/pull/1615
 [terminal-colorsaurus]: https://github.com/bash/terminal-colorsaurus
 [terminal-trx]: https://github.com/bash/terminal-trx
+[terminology]: https://git.enlightenment.org/enlightenment/terminology
+[terminology-issue]: https://git.enlightenment.org/enlightenment/terminology/issues/14
