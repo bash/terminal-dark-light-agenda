@@ -12,7 +12,7 @@ jumping off point to the different PRs / issues.
 ## Contributions
 * (PR) [delta]: [Detect Dark/Light Mode from Terminal][delta-pr]
 * (WIP) [bat]: [`dark-light` Branch](https://github.com/bash/bat/tree/dark-light)
-* (Issue) [Terminology]: [Responses to Queries for the Foreground and Background Color Use Different Format][terminology-issue]
+* ~~(Issue) [Terminology]: [Responses to Queries for the Foreground and Background Color Use Different Format][terminology-issue]~~
 
 [bat]: https://github.com/sharkdp/bat
 [delta]: https://github.com/dandavison/delta
