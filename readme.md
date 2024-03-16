@@ -11,7 +11,7 @@ jumping off point to the different PRs / issues.
 
 ## Contributions
 * (PR) [delta]: [Detect Dark/Light Mode from Terminal][delta-pr]
-* (WIP) [bat]: [`dark-light` Branch](https://github.com/bash/bat/tree/dark-light)
+* (PR) [bat]: [Choose Theme Based on The Terminal's Color Scheme](https://github.com/sharkdp/bat/pull/2896)
 * ~~(Issue) [Terminology]: [Responses to Queries for the Foreground and Background Color Use Different Format][terminology-issue]~~
 
 [bat]: https://github.com/sharkdp/bat
