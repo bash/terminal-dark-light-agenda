@@ -12,12 +12,10 @@ jumping off point to the different PRs / issues.
 ## Contributions
 * (PR) [delta]: [Detect Dark/Light Mode from Terminal][delta-pr]
 * (PR) [bat]: [Choose Theme Based on The Terminal's Color Scheme](https://github.com/sharkdp/bat/pull/2896)
-* ~~(Issue) [Terminology]: [Responses to Queries for the Foreground and Background Color Use Different Format][terminology-issue]~~
+
 
 [bat]: https://github.com/sharkdp/bat
 [delta]: https://github.com/dandavison/delta
 [delta-pr]: https://github.com/dandavison/delta/pull/1615
 [terminal-colorsaurus]: https://github.com/bash/terminal-colorsaurus
 [terminal-trx]: https://github.com/bash/terminal-trx
-[terminology]: https://git.enlightenment.org/enlightenment/terminology
-[terminology-issue]: https://git.enlightenment.org/enlightenment/terminology/issues/14
