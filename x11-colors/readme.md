@@ -3,6 +3,9 @@
 ## Questions
 * [Terminology]: [Responses to Queries for the Foreground and Background Color Use Different Format][terminology-issue]
 
+[terminology]: https://git.enlightenment.org/enlightenment/terminology
+[terminology-issue]: https://git.enlightenment.org/enlightenment/terminology/issues/14
+
 ## Resources
 * [Color Strings](https://www.x.org/releases/current/doc/libX11/libX11/libX11.html#Color_Strings)
 * [X11 Built-in Color Names](https://gitlab.freedesktop.org/xorg/xserver/blob/master/os/oscolor.c)
@@ -10,6 +13,34 @@
 * Wikipedia: [X11 Color Names](https://en.wikipedia.org/wiki/X11_color_names)
 * tmux's Implementation of [parsing an X11 color](https://github.com/tmux/tmux/blob/b79e28b2c30e7ef9b1f7ec6233eeb70a1a177231/colour.c#L965)
 
+## Survey
+Survey of which terminals support (parsing) which color formats:
 
-[terminology]: https://git.enlightenment.org/enlightenment/terminology
-[terminology-issue]: https://git.enlightenment.org/enlightenment/terminology/issues/14
+| Terminal                                 | `rgb:<r>/<g>/<b>` | `#<r><g><b>` | named    | `rgbi:<r>/<g>/<b>` |
+|------------------------------------------|-------------------|--------------|----------|--------------------|
+| [hterm][hterm-src]                       | yes               | yes          | yes      | no                 |
+| [xterm.js][xterm.js-src]                 | yes               | yes          | no       | no                 |
+| [iTerm2][iterm2-src]                     | yes               | yes          | no       | no                 |
+| [Alacritty][alacritty-src]               | yes               | yes          | no       | no                 |
+| [Contour][contour-src]                   | yes [^1]          | yes [^2]     | no       | no                 |
+| vte                                      | yes               | TODO         | yes [^3] | TODO               |
+| [Konsole][konsole-src] using [QColor]    | no [^4]           | yes          | yes [^3] | no                 |
+| QTerminal                                | no                | no           | no       | no                 |
+| [foot][foot-src]                         | yes [^5]          | yes [^5]     | no       | no                 |
+| xterm                                    | yes               | yes          | yes      | yes                |
+
+[^1]: Only 8-bit (i.e. two hex digits) per channel supported (e.g. `rgb:fe/fe/fe` but not `rgb:f/f/f` or `rgb:fee/fee/fee`)
+[^2]: Only one or two hex digits per channel supported (e.g. `#fff` or `#fefefe` but not `#feefeefee`)
+[^3]: Refers to the [SVG color keyword names], not the X11 list.
+[^4]: Note that it still reports the color in the `rgb:<r>/<g>/<b>` format when queried.
+[^5]: In addition, colors with alpha are supported: `rgba:<r>/<g>/<b>/<a>` and `[aa]#<r><g><b>`.
+
+[hterm-src]: https://chromium.googlesource.com/apps/libapps/+/HEAD/libdot/js/lib_colors.js#175
+[xterm.js-src]: https://github.com/xtermjs/xterm.js/blob/9ec9dca5f8ca8e1f107f7cf4c8a545672e8f69c4/src/common/input/XParseColor.ts#L23
+[iterm2-src]: https://github.com/gnachman/iTerm2/blob/691fd5dd8c7dd7606becee320ece1648152af6c0/sources/VT100Terminal.m#L3729
+[alacritty-src]: https://github.com/alacritty/vte/blob/ed51aa19b7ad060f62a75ec55ebb802ced850b1a/src/ansi.rs#L184
+[contour-src]: https://github.com/contour-terminal/contour/blob/521b1408600951b63b285ff459f6fc6e9fbf6806/src/vtbackend/Color.cpp#L132
+[konsole-src]: https://invent.kde.org/utilities/konsole/-/blob/0880a2137be8907ec06ba96918753735790c02fc/src/session/Session.cpp#L617
+[QColor]: https://github.com/qt/qtbase/blob/e146d835a69d57748bf2978cf5134ac5d86d81cf/src/gui/painting/qcolor.cpp#L980
+[SVG color keyword names]: https://www.w3.org/TR/SVG11/types.html#ColorKeywords
+[foot-src]: https://codeberg.org/dnkl/foot/src/commit/5f41eb798b639774d5cb2a7656fbaf4c61a16352/osc.c#L711
