@@ -13,27 +13,40 @@
 * Wikipedia: [X11 Color Names](https://en.wikipedia.org/wiki/X11_color_names)
 * tmux's Implementation of [parsing an X11 color](https://github.com/tmux/tmux/blob/b79e28b2c30e7ef9b1f7ec6233eeb70a1a177231/colour.c#L965)
 
-## Survey
-Survey of which terminals support (parsing) which color formats:
+## Accepted Formats
+Survey of terminal support (parsing) for various color formats for use with `OSC 10` and friends.
 
-| Terminal                                 | `rgb:<r>/<g>/<b>` | `#<r><g><b>` | named    | `rgbi:<r>/<g>/<b>` |
-|------------------------------------------|-------------------|--------------|----------|--------------------|
-| [hterm][hterm-src]                       | yes               | yes          | yes      | no                 |
-| [xterm.js][xterm.js-src]                 | yes               | yes          | no       | no                 |
-| [iTerm2][iterm2-src]                     | yes               | yes          | no       | no                 |
-| [Alacritty][alacritty-src]               | yes               | yes          | no       | no                 |
-| [Contour][contour-src]                   | yes [^1]          | yes [^2]     | no       | no                 |
-| vte                                      | yes               | TODO         | yes [^3] | TODO               |
-| [Konsole][konsole-src] using [QColor]    | no [^4]           | yes          | yes [^3] | no                 |
-| QTerminal                                | no                | no           | no       | no                 |
-| [foot][foot-src]                         | yes [^5]          | yes [^5]     | no       | no                 |
-| xterm                                    | yes               | yes          | yes      | yes                |
+| Terminal                              | `rgb:<r>/<g>/<b>` | `#<r><g><b>` | named    | `rgbi:<r>/<g>/<b>` | additional                                              |
+|---------------------------------------|-------------------|--------------|----------|--------------------|---------------------------------------------------------|
+| [hterm][hterm-src]                    | yes               | yes          | yes      | no                 |                                                         |
+| [xterm.js][xterm.js-src]              | yes               | yes          | no       | no                 |                                                         |
+| [iTerm2][iterm2-src]                  | yes               | yes          | no       | no                 |                                                         |
+| [Alacritty][alacritty-src]            | yes               | yes          | no       | no                 |                                                         |
+| [Contour][contour-src]                | yes [^1]          | yes [^2]     | no       | no                 |                                                         |
+| vte                                   | yes               | TODO         | yes [^3] | TODO               |                                                         |
+| [Konsole][konsole-src] using [QColor] | no [^4]           | yes          | yes [^3] | no                 |                                                         |
+| QTerminal                             | no                | no           | no       | no                 |                                                         |
+| [foot][foot-src]                      | yes [^5]          | yes [^6]     | no       | no                 |                                                         |
+| xterm                                 | yes               | yes          | yes      | yes                |                                                         |
+| [WezTerm][wezterm-src]                | yes [^5]          | yes          | yes      | no                 | `hsl:...`, [css colors], `transparent`, `none`, `clear` |
+| [kitty][kitty-src]                    | yes               | yes          | yes      | no                 |                                                         |
+| [Rio][rio-src]                        | yes               | yes          | no       | no                 |                                                         |
+| [rxvt-unicode][rxvt-src]              | yes               | yes [^6]     | yes      | yes                |                                                         |
+| mrxvt                                 | no                | no           | no       | no                 |                                                         |
+| Eterm                                 | no                | no           | no       | no                 |                                                         |
+| anyterm                               | no                | no           | no       | no                 |                                                         |
+
+## Emitted Formats
+| Terminal                 | `rgb:<r>/<g>/<b>` | `rgba:<r>/<g>/<b>/<a>` |
+|--------------------------|-------------------|------------------------|
+| [rxvt-unicode][rxvt-src] | yes               | yes                    |
 
 [^1]: Only 8-bit (i.e. two hex digits) per channel supported (e.g. `rgb:fe/fe/fe` but not `rgb:f/f/f` or `rgb:fee/fee/fee`)
 [^2]: Only one or two hex digits per channel supported (e.g. `#fff` or `#fefefe` but not `#feefeefee`)
 [^3]: Refers to the [SVG color keyword names], not the X11 list.
 [^4]: Note that it still reports the color in the `rgb:<r>/<g>/<b>` format when queried.
-[^5]: In addition, colors with alpha are supported: `rgba:<r>/<g>/<b>/<a>` and `[aa]#<r><g><b>`.
+[^5]: In addition, colors with alpha are supported i.e `rgba:<r>/<g>/<b>/<a>`.
+[^6]: In addition, colors with alpha are supported i.e. `[aa]#<r><g><b>`.
 
 [hterm-src]: https://chromium.googlesource.com/apps/libapps/+/HEAD/libdot/js/lib_colors.js#175
 [xterm.js-src]: https://github.com/xtermjs/xterm.js/blob/9ec9dca5f8ca8e1f107f7cf4c8a545672e8f69c4/src/common/input/XParseColor.ts#L23
@@ -44,3 +57,9 @@ Survey of which terminals support (parsing) which color formats:
 [QColor]: https://github.com/qt/qtbase/blob/e146d835a69d57748bf2978cf5134ac5d86d81cf/src/gui/painting/qcolor.cpp#L980
 [SVG color keyword names]: https://www.w3.org/TR/SVG11/types.html#ColorKeywords
 [foot-src]: https://codeberg.org/dnkl/foot/src/commit/5f41eb798b639774d5cb2a7656fbaf4c61a16352/osc.c#L711
+[wezterm-src]: https://github.com/wez/wezterm/blob/889f8a9cd71a2b3552f28f6d1864aa3cd9461fdf/color-types/src/lib.rs#L657
+[css colors]: https://docs.rs/csscolorparser/latest/csscolorparser/
+[kitty-src]: https://github.com/kovidgoyal/kitty/blob/3c19b6f734349249c014c97324011217eae63867/kitty/rgb.py#L60
+[rio-src]: https://github.com/raphamorim/rio/blob/be139e9e847d4c967086a88dde951a32c2464aed/rio-backend/src/performer/handler.rs#L39
+[rxvt-src]: http://cvs.schmorp.de/rxvt-unicode/src/command.C?view=markup#l3440
+<!-- rxvt source code hint: look at process_color_seq -->
