@@ -35,6 +35,8 @@ Survey of terminal support (parsing) for various color formats for use with `OSC
 | mrxvt                                 | no                | no           | no       | no                 |                                                         |
 | Eterm                                 | no                | no           | no       | no                 |                                                         |
 | anyterm                               | no                | no           | no       | no                 |                                                         |
+| [Terminology][terminology-src]        | yes               | yes          | no       | yes                |                                                         |
+| [tmux][tmux-src]                      | yes               | yes          | yes      | no                 | `cmyk:..`, `cmy:...`                                    |
 
 ## Emitted Formats
 | Terminal                 | `rgb:<r>/<g>/<b>` | `rgba:<r>/<g>/<b>/<a>` |
@@ -63,3 +65,5 @@ Survey of terminal support (parsing) for various color formats for use with `OSC
 [rio-src]: https://github.com/raphamorim/rio/blob/be139e9e847d4c967086a88dde951a32c2464aed/rio-backend/src/performer/handler.rs#L39
 [rxvt-src]: http://cvs.schmorp.de/rxvt-unicode/src/command.C?view=markup#l3440
 <!-- rxvt source code hint: look at process_color_seq -->
+[tmux-src]: https://github.com/tmux/tmux/blob/b79e28b2c30e7ef9b1f7ec6233eeb70a1a177231/colour.c#L965
+[terminology-src]: https://git.enlightenment.org/enlightenment/terminology/src/commit/3c967f3379b71e6c563e917784afe96470b75259/src/bin/termptyesc.c#L4022
