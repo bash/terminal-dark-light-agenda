@@ -23,7 +23,7 @@ TODO
 ## Prior Art and Alternatives
 ### `SIGWINCH`
 This mechanism is implemented by [iTerm][iterm-sigwinch].
-Some tools such as [tmux-sigwinch] and [zellij-sigwinch] already interpret `SIGWINCH` as a color changed signal.
+Some tools such as [tmux][tmux-sigwinch] and [zellij][zellij-sigwinch] already interpret `SIGWINCH` as a color changed signal.
 
 Using an escape sequence to deliver the change notification
 has a couple of advantages over using `SIGWINCH`:
