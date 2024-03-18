@@ -17,7 +17,7 @@
 Survey of terminal support (parsing) for various color formats for use with `OSC 10` and friends.
 
 | Terminal                              | `rgb:<r>/<g>/<b>` | `#<r><g><b>` | named    | `rgbi:<r>/<g>/<b>` | additional                                              |
-|---------------------------------------|-------------------|--------------|----------|--------------------|---------------------------------------------------------|
+|---------------------------------------|-------------------|--------------|--m--------|--------------------|---------------------------------------------------------|
 | [hterm][hterm-src]                    | yes               | yes          | yes      | no                 |                                                         |
 | [xterm.js][xterm.js-src]              | yes               | yes          | no       | no                 |                                                         |
 | [iTerm2][iterm2-src]                  | yes               | yes          | no       | no                 |                                                         |
@@ -43,6 +43,7 @@ Survey of terminal support (parsing) for various color formats for use with `OSC
 | Terminal                 | `rgb:<r>/<g>/<b>` | `rgba:<r>/<g>/<b>/<a>` |
 |--------------------------|-------------------|------------------------|
 | [rxvt-unicode][rxvt-src] | yes               | yes                    |
+| Terminal.app             | yes [^7]          | no [^7]                |
 
 [^1]: Only 8-bit (i.e. two hex digits) per channel supported (e.g. `rgb:fe/fe/fe` but not `rgb:f/f/f` or `rgb:fee/fee/fee`)
 [^2]: Only one or two hex digits per channel supported (e.g. `#fff` or `#fefefe` but not `#feefeefee`)
