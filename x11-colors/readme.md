@@ -21,6 +21,7 @@ Survey of terminal support (parsing) for various color formats for use with `OSC
 | [hterm][hterm-src]                    | yes               | yes          | yes      | no                 |                                                         |
 | [xterm.js][xterm.js-src]              | yes               | yes          | no       | no                 |                                                         |
 | [iTerm2][iterm2-src]                  | yes               | yes          | no       | no                 |                                                         |
+| Terminal.app                          | yes [^7]          | yes [^7]     | no [^7]  | yes [^7]           | 
 | [Alacritty][alacritty-src]            | yes               | yes          | no       | no                 |                                                         |
 | [Contour][contour-src]                | yes [^1]          | yes [^2]     | no       | no                 |                                                         |
 | vte                                   | yes               | TODO         | yes [^3] | TODO               |                                                         |
@@ -49,6 +50,7 @@ Survey of terminal support (parsing) for various color formats for use with `OSC
 [^4]: Note that it still reports the color in the `rgb:<r>/<g>/<b>` format when queried.
 [^5]: In addition, colors with alpha are supported i.e `rgba:<r>/<g>/<b>/<a>`.
 [^6]: In addition, colors with alpha are supported i.e. `[aa]#<r><g><b>`.
+[^7]: Tested without access to the source code.
 
 [hterm-src]: https://chromium.googlesource.com/apps/libapps/+/HEAD/libdot/js/lib_colors.js#175
 [xterm.js-src]: https://github.com/xtermjs/xterm.js/blob/9ec9dca5f8ca8e1f107f7cf4c8a545672e8f69c4/src/common/input/XParseColor.ts#L23
