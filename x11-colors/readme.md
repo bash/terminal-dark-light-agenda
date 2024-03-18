@@ -28,7 +28,7 @@ Survey of terminal support (parsing) for various color formats for use with `OSC
 | [Konsole][konsole-src] using [QColor] | no [^4]           | yes          | yes [^3] | no                 |                                                         |
 | QTerminal                             | no                | no           | no       | no                 |                                                         |
 | [foot][foot-src]                      | yes [^5]          | yes [^6]     | no       | no                 |                                                         |
-| xterm                                 | yes               | yes          | yes      | yes                |                                                         |
+| xterm (uses X11)                      | yes               | yes          | yes      | yes                |                                                         |
 | [WezTerm][wezterm-src]                | yes [^5]          | yes          | yes      | no                 | `hsl:...`, [css colors], `transparent`, `none`, `clear` |
 | [kitty][kitty-src]                    | yes               | yes          | yes      | no                 |                                                         |
 | [Rio][rio-src]                        | yes               | yes          | no       | no                 |                                                         |
@@ -40,6 +40,7 @@ Survey of terminal support (parsing) for various color formats for use with `OSC
 | [tmux][tmux-src]                      | yes               | yes          | yes      | no                 | `cmyk:..`, `cmy:...` both of which [come from mintty]   |
 | [mintty][mintty-src]                  | yes               | yes          | yes      | no                 | `cmyk:..`, `cmy:...`, `rrr,ggg,bbb`                     |
 | [Termux][termux-src]                  | yes               | yes          | no       | no                 |                                                         |
+| st (uses X11)                         | yes               | yes          | yes      | yes                |                                                         |
 
 ## Emitted Formats
 | Terminal                         | `rgb:<r>/<g>/<b>` | additional                     | 
@@ -66,6 +67,7 @@ Survey of terminal support (parsing) for various color formats for use with `OSC
 | [tmux][tmux-src-2]               | 16-bit            |                                |
 | [mintty][mintty-src-2]           | 16-bit            |                                |
 | [Termux][termux-src-2]           | 16-bit            |                                |
+| [st][st-src-2]                   | 16-bit            |                                |
 
 [^1]: Only 8-bit (i.e. two hex digits) per channel supported (e.g. `rgb:fe/fe/fe` but not `rgb:f/f/f` or `rgb:fee/fee/fee`)
 [^2]: Only one or two hex digits per channel supported (e.g. `#fff` or `#fefefe` but not `#feefeefee`)
@@ -110,3 +112,5 @@ Survey of terminal support (parsing) for various color formats for use with `OSC
 [tmux-src-2]: https://github.com/tmux/tmux/blob/b79e28b2c30e7ef9b1f7ec6233eeb70a1a177231/input.c#L2556
 [termux-src]: https://github.com/termux/termux-app/blob/8e3a8980a849046adbd4156741e1d84047ee1df6/terminal-emulator/src/main/java/com/termux/terminal/TerminalColors.java#L37
 [termux-src-2]: https://github.com/termux/termux-app/blob/8e3a8980a849046adbd4156741e1d84047ee1df6/terminal-emulator/src/main/java/com/termux/terminal/TerminalEmulator.java#L1978
+[st-src-2]: https://git.suckless.org/st/file/st.c.html#l1860
+<!-- st source code hint: look for the function osc_color_response -->
