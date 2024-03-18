@@ -37,13 +37,15 @@ Survey of terminal support (parsing) for various color formats for use with `OSC
 | Eterm                                 | no                | no           | no       | no                 |                                                         |
 | anyterm                               | no                | no           | no       | no                 |                                                         |
 | [Terminology][terminology-src]        | yes               | yes          | no       | yes                |                                                         |
-| [tmux][tmux-src]                      | yes               | yes          | yes      | no                 | `cmyk:..`, `cmy:...`                                    |
+| [tmux][tmux-src]                      | yes               | yes          | yes      | no                 | `cmyk:..`, `cmy:...` both of which [come from mintty]   |
+| [mintty][mintty-src]                  | yes               | yes          | yes      | no                 | `cmyk:..`, `cmy:...`, `rrr,ggg,bbb`                     |
 
 ## Emitted Formats
 | Terminal                 | `rgb:<r>/<g>/<b>` | `rgba:<r>/<g>/<b>/<a>` |
 |--------------------------|-------------------|------------------------|
 | [rxvt-unicode][rxvt-src] | yes               | yes                    |
 | Terminal.app             | yes [^7]          | no [^7]                |
+| [mintty][mintty-src-2]   | yes               | no                     |
 
 [^1]: Only 8-bit (i.e. two hex digits) per channel supported (e.g. `rgb:fe/fe/fe` but not `rgb:f/f/f` or `rgb:fee/fee/fee`)
 [^2]: Only one or two hex digits per channel supported (e.g. `#fff` or `#fefefe` but not `#feefeefee`)
@@ -70,3 +72,6 @@ Survey of terminal support (parsing) for various color formats for use with `OSC
 <!-- rxvt source code hint: look at process_color_seq -->
 [tmux-src]: https://github.com/tmux/tmux/blob/b79e28b2c30e7ef9b1f7ec6233eeb70a1a177231/colour.c#L965
 [terminology-src]: https://git.enlightenment.org/enlightenment/terminology/src/commit/3c967f3379b71e6c563e917784afe96470b75259/src/bin/termptyesc.c#L4022
+[mintty-src]: https://github.com/mintty/mintty/blob/b9384e0cdf999be0b5ba4b7fc2f74eda0080bdc1/wiki/Tips.md#changing-colours
+[come from mintty]: https://github.com/tmux/tmux/issues/2567
+[mintty-src-2]: https://github.com/mintty/mintty/blob/b9384e0cdf999be0b5ba4b7fc2f74eda0080bdc1/src/termout.c#L4048
