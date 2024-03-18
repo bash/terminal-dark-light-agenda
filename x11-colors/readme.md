@@ -39,6 +39,7 @@ Survey of terminal support (parsing) for various color formats for use with `OSC
 | [Terminology][terminology-src]        | yes               | yes          | no       | yes                |                                                         |
 | [tmux][tmux-src]                      | yes               | yes          | yes      | no                 | `cmyk:..`, `cmy:...` both of which [come from mintty]   |
 | [mintty][mintty-src]                  | yes               | yes          | yes      | no                 | `cmyk:..`, `cmy:...`, `rrr,ggg,bbb`                     |
+| [Termux][termux-src]                  | yes               | yes          | no       | no                 |                                                         |
 
 ## Emitted Formats
 | Terminal                         | `rgb:<r>/<g>/<b>` | additional                     | 
@@ -64,6 +65,7 @@ Survey of terminal support (parsing) for various color formats for use with `OSC
 | [Terminology][terminology-src-2] | 16-bit            | `#<r><g><b>`, 8-bit            |
 | [tmux][tmux-src-2]               | 16-bit            |                                |
 | [mintty][mintty-src-2]           | 16-bit            |                                |
+| [Termux][termux-src-2]           | 16-bit            |                                |
 
 [^1]: Only 8-bit (i.e. two hex digits) per channel supported (e.g. `rgb:fe/fe/fe` but not `rgb:f/f/f` or `rgb:fee/fee/fee`)
 [^2]: Only one or two hex digits per channel supported (e.g. `#fff` or `#fefefe` but not `#feefeefee`)
@@ -106,3 +108,5 @@ Survey of terminal support (parsing) for various color formats for use with `OSC
 [terminology-src-2]: https://git.enlightenment.org/enlightenment/terminology/src/commit/3c967f3379b71e6c563e917784afe96470b75259/src/bin/termptyesc.c#L4290
 [terminology-src-3]: https://git.enlightenment.org/enlightenment/terminology/src/commit/3c967f3379b71e6c563e917784afe96470b75259/src/bin/termptyesc.c#L4245
 [tmux-src-2]: https://github.com/tmux/tmux/blob/b79e28b2c30e7ef9b1f7ec6233eeb70a1a177231/input.c#L2556
+[termux-src]: https://github.com/termux/termux-app/blob/8e3a8980a849046adbd4156741e1d84047ee1df6/terminal-emulator/src/main/java/com/termux/terminal/TerminalColors.java#L37
+[termux-src-2]: https://github.com/termux/termux-app/blob/8e3a8980a849046adbd4156741e1d84047ee1df6/terminal-emulator/src/main/java/com/termux/terminal/TerminalEmulator.java#L1978
