@@ -41,6 +41,7 @@ Survey of terminal support (parsing) for various color formats for use with `OSC
 | [mintty][mintty-src]                  | yes               | yes          | yes      | no                 | `cmyk:..`, `cmy:...`, `rrr,ggg,bbb`                     |
 | [Termux][termux-src]                  | yes               | yes          | no       | no                 |                                                         |
 | st (uses X11)                         | yes               | yes          | yes      | yes                |                                                         |
+| [Windows Console Host][conhost-src]   | yes               | yes          | yes      | no                 |                                                         |
 
 ## Emitted Formats
 | Terminal                         | `rgb:<r>/<g>/<b>` | additional                     | 
@@ -68,6 +69,7 @@ Survey of terminal support (parsing) for various color formats for use with `OSC
 | [mintty][mintty-src-2]           | 16-bit            |                                |
 | [Termux][termux-src-2]           | 16-bit            |                                |
 | [st][st-src-2]                   | 16-bit            |                                |
+| Windows Console Host             | —                 | —                              |
 
 [^1]: Only 8-bit (i.e. two hex digits) per channel supported (e.g. `rgb:fe/fe/fe` but not `rgb:f/f/f` or `rgb:fee/fee/fee`)
 [^2]: Only one or two hex digits per channel supported (e.g. `#fff` or `#fefefe` but not `#feefeefee`)
@@ -114,3 +116,4 @@ Survey of terminal support (parsing) for various color formats for use with `OSC
 [termux-src-2]: https://github.com/termux/termux-app/blob/8e3a8980a849046adbd4156741e1d84047ee1df6/terminal-emulator/src/main/java/com/termux/terminal/TerminalEmulator.java#L1978
 [st-src-2]: https://git.suckless.org/st/file/st.c.html#l1860
 <!-- st source code hint: look for the function osc_color_response -->
+[conhost-src]: https://github.com/microsoft/terminal/blob/d2bd18735edfcf51046fadba14f85b5cf78d7112/src/types/utils.cpp#L161
