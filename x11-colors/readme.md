@@ -17,7 +17,7 @@
 Survey of terminal support (parsing) for various color formats for use with `OSC 10` and friends.
 
 | Terminal                              | `rgb:<r>/<g>/<b>` | `#<r><g><b>` | named    | `rgbi:<r>/<g>/<b>` | additional                                              |
-|---------------------------------------|-------------------|--------------|--m--------|--------------------|---------------------------------------------------------|
+|---------------------------------------|-------------------|--------------|----------|--------------------|---------------------------------------------------------|
 | [hterm][hterm-src]                    | yes               | yes          | yes      | no                 |                                                         |
 | [xterm.js][xterm.js-src]              | yes               | yes          | no       | no                 |                                                         |
 | [iTerm2][iterm2-src]                  | yes               | yes          | no       | no                 |                                                         |
