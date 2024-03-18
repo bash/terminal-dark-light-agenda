@@ -41,11 +41,23 @@ Survey of terminal support (parsing) for various color formats for use with `OSC
 | [mintty][mintty-src]                  | yes               | yes          | yes      | no                 | `cmyk:..`, `cmy:...`, `rrr,ggg,bbb`                     |
 
 ## Emitted Formats
-| Terminal                 | `rgb:<r>/<g>/<b>` | `rgba:<r>/<g>/<b>/<a>` |
-|--------------------------|-------------------|------------------------|
-| [rxvt-unicode][rxvt-src] | yes               | yes                    |
-| Terminal.app             | yes [^7]          | no [^7]                |
-| [mintty][mintty-src-2]   | yes               | no                     |
+| Terminal                         | `rgb:<r>/<g>/<b>` | additional                     | 
+|----------------------------------|-------------------|--------------------------------|
+| hterm                            | —                 | —                              |
+| [xterm.js][xterm.js-src-2]       | 16-bit            |                                |
+| [iTerm2][iterm2-src-2]           | 16-bit [^8]       |                                |
+| Terminal.app [^7]                | 16-bit            |                                |
+| [Alacritty][alacritty-src-2]     | 16-bit            |                                |
+| [Contour][contour-src-2]         | 16-bit            |                                |
+| [Konsole][konsole-src-2]         | 16-bit            |                                |
+| [foot][foot-src-2]               | 16-bit            |                                |
+| [WezTerm][wezterm-src-2]         | 16-bit            |                                |
+| [kitty][kitty-src-2]             | 16-bit            |                                |
+| [Rio][rio-src-2]                 | 16-bit            |                                |
+| [rxvt-unicode][rxvt-src]         | 16-bit            | `rgba:<r>/<g>/<b>/<a>`, 16-bit |
+| [Terminology][terminology-src-2] | 16-bit            | `#<r><g><b>`, 8-bit            |
+| [tmux][tmux-src-2]               | 16-bit            |                                |
+| [mintty][mintty-src-2]           | 16-bit            |                                |
 
 [^1]: Only 8-bit (i.e. two hex digits) per channel supported (e.g. `rgb:fe/fe/fe` but not `rgb:f/f/f` or `rgb:fee/fee/fee`)
 [^2]: Only one or two hex digits per channel supported (e.g. `#fff` or `#fefefe` but not `#feefeefee`)
@@ -54,6 +66,7 @@ Survey of terminal support (parsing) for various color formats for use with `OSC
 [^5]: In addition, colors with alpha are supported i.e `rgba:<r>/<g>/<b>/<a>`.
 [^6]: In addition, colors with alpha are supported i.e. `[aa]#<r><g><b>`.
 [^7]: Tested without access to the source code.
+[^8]: But can be configured to use 8-bit color values.
 
 [hterm-src]: https://chromium.googlesource.com/apps/libapps/+/HEAD/libdot/js/lib_colors.js#175
 [xterm.js-src]: https://github.com/xtermjs/xterm.js/blob/9ec9dca5f8ca8e1f107f7cf4c8a545672e8f69c4/src/common/input/XParseColor.ts#L23
@@ -75,3 +88,15 @@ Survey of terminal support (parsing) for various color formats for use with `OSC
 [mintty-src]: https://github.com/mintty/mintty/blob/b9384e0cdf999be0b5ba4b7fc2f74eda0080bdc1/wiki/Tips.md#changing-colours
 [come from mintty]: https://github.com/tmux/tmux/issues/2567
 [mintty-src-2]: https://github.com/mintty/mintty/blob/b9384e0cdf999be0b5ba4b7fc2f74eda0080bdc1/src/termout.c#L4048
+[xterm.js-src-2]: https://github.com/xtermjs/xterm.js/blob/9ec9dca5f8ca8e1f107f7cf4c8a545672e8f69c4/src/common/input/XParseColor.ts#L77
+[iterm2-src-2]: https://github.com/gnachman/iTerm2/blob/b202da066446e3e3875c3daeb4bcad8327338364/sources/VT100Output.m#L1136C37-L1136C57
+[alacritty-src-2]: https://github.com/alacritty/alacritty/blob/fe88aaa0855283d689dc41d531db916404ef9c51/alacritty_terminal/src/term/mod.rs#L1644
+[contour-src-2]: https://github.com/contour-terminal/contour/blob/521b1408600951b63b285ff459f6fc6e9fbf6806/src/vtbackend/Sequencer.h#L96
+[konsole-src-2]: https://invent.kde.org/utilities/konsole/-/blob/882291ad3bf14f719dca9d4694ed1b609447371c/src/session/Session.cpp#L888
+[foot-src-2]: https://codeberg.org/dnkl/foot/src/commit/5f41eb798b639774d5cb2a7656fbaf4c61a16352/osc.c#L698
+[rio-src-2]: https://github.com/raphamorim/rio/blob/be139e9e847d4c967086a88dde951a32c2464aed/rio-backend/src/crosswords/mod.rs#L1389
+[wezterm-src-2]: https://github.com/wez/wezterm/blob/889f8a9cd71a2b3552f28f6d1864aa3cd9461fdf/termwiz/src/color.rs#L132
+[kitty-src-2]: https://github.com/kovidgoyal/kitty/blob/a0424bf1bd7187fe6017ec118c3c9318e8b28920/kitty/window.py#L1176
+[terminology-src-2]: https://git.enlightenment.org/enlightenment/terminology/src/commit/3c967f3379b71e6c563e917784afe96470b75259/src/bin/termptyesc.c#L4290
+[terminology-src-3]: https://git.enlightenment.org/enlightenment/terminology/src/commit/3c967f3379b71e6c563e917784afe96470b75259/src/bin/termptyesc.c#L4245
+[tmux-src-2]: https://github.com/tmux/tmux/blob/b79e28b2c30e7ef9b1f7ec6233eeb70a1a177231/input.c#L2556
