@@ -49,12 +49,18 @@ Survey of terminal support (parsing) for various color formats for use with `OSC
 | Terminal.app [^7]                | 16-bit            |                                |
 | [Alacritty][alacritty-src-2]     | 16-bit            |                                |
 | [Contour][contour-src-2]         | 16-bit            |                                |
+| vte                              | TODO              | TODO                           |
 | [Konsole][konsole-src-2]         | 16-bit            |                                |
+| QTerminal                        | —                 | —                              |
 | [foot][foot-src-2]               | 16-bit            |                                |
+| xterm                            | TODO              | TODO                           |
 | [WezTerm][wezterm-src-2]         | 16-bit            |                                |
 | [kitty][kitty-src-2]             | 16-bit            |                                |
 | [Rio][rio-src-2]                 | 16-bit            |                                |
 | [rxvt-unicode][rxvt-src]         | 16-bit            | `rgba:<r>/<g>/<b>/<a>`, 16-bit |
+| mrxvt                            | —                 | —                              |
+| Eterm                            | —                 | —                              |
+| anyterm                          | —                 | —                              |
 | [Terminology][terminology-src-2] | 16-bit            | `#<r><g><b>`, 8-bit            |
 | [tmux][tmux-src-2]               | 16-bit            |                                |
 | [mintty][mintty-src-2]           | 16-bit            |                                |
