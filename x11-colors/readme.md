@@ -1,11 +1,5 @@
 # X11 Colors
 
-## Questions
-* [Terminology]: [Responses to Queries for the Foreground and Background Color Use Different Format][terminology-issue]
-
-[terminology]: https://git.enlightenment.org/enlightenment/terminology
-[terminology-issue]: https://git.enlightenment.org/enlightenment/terminology/issues/14
-
 ## Resources
 * [Color Strings](https://www.x.org/releases/current/doc/libX11/libX11/libX11.html#Color_Strings)
 * [X11 Built-in Color Names](https://gitlab.freedesktop.org/xorg/xserver/blob/master/os/oscolor.c)
@@ -119,3 +113,10 @@ Survey of the format used by terminals in response to `OSC 10` / `OSC 11` querie
 [st-src-2]: https://git.suckless.org/st/file/st.c.html#l1860
 <!-- st source code hint: look for the function osc_color_response -->
 [conhost-src]: https://github.com/microsoft/terminal/blob/d2bd18735edfcf51046fadba14f85b5cf78d7112/src/types/utils.cpp#L161
+
+
+## Questions
+* [Terminology]: [Responses to Queries for the Foreground and Background Color Use Different Format][terminology-issue]
+
+[terminology]: https://git.enlightenment.org/enlightenment/terminology
+[terminology-issue]: https://git.enlightenment.org/enlightenment/terminology/issues/14
