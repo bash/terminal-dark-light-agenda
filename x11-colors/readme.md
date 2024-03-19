@@ -44,6 +44,8 @@ Survey of terminal support (parsing) for various color formats for use with `OSC
 | [Windows Console Host][conhost-src]   | yes               | yes          | yes      | no                 |                                                         |
 
 ## Emitted Formats
+Survey of the format used by terminals in response to `OSC 10` / `OSC 11` queries.
+
 | Terminal                         | `rgb:<r>/<g>/<b>` | additional                     | 
 |----------------------------------|-------------------|--------------------------------|
 | hterm                            | —                 | —                              |
