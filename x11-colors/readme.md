@@ -18,7 +18,7 @@ Survey of terminal support (parsing) for various color formats for use with `OSC
 | Terminal.app                          | yes [^7]          | yes [^7]     | no [^7]  | yes [^7]           | 
 | [Alacritty][alacritty-src]            | yes               | yes          | no       | no                 |                                                         |
 | [Contour][contour-src]                | yes [^1]          | yes [^2]     | no       | no                 |                                                         |
-| vte                                   | yes               | TODO         | yes [^3] | TODO               |                                                         |
+| [vte][vte-src]                        | yes               | yes          | yes [^3] | no                 |                                                         |
 | [Konsole][konsole-src] using [QColor] | no [^4]           | yes          | yes [^3] | no                 |                                                         |
 | QTerminal                             | no                | no           | no       | no                 |                                                         |
 | [foot][foot-src]                      | yes [^5]          | yes [^6]     | no       | no                 |                                                         |
@@ -48,7 +48,7 @@ Survey of the format used by terminals in response to `OSC 10` / `OSC 11` querie
 | Terminal.app [^7]                | 16-bit            |                                |
 | [Alacritty][alacritty-src-2]     | 16-bit            |                                |
 | [Contour][contour-src-2]         | 16-bit            |                                |
-| vte                              | TODO              | TODO                           |
+| [vte][vte-src-2]                 | 16-bi             |                                |
 | [Konsole][konsole-src-2]         | 16-bit            |                                |
 | QTerminal                        | —                 | —                              |
 | [foot][foot-src-2]               | 16-bit            |                                |
@@ -113,6 +113,8 @@ Survey of the format used by terminals in response to `OSC 10` / `OSC 11` querie
 [st-src-2]: https://git.suckless.org/st/file/st.c.html#l1860
 <!-- st source code hint: look for the function osc_color_response -->
 [conhost-src]: https://github.com/microsoft/terminal/blob/d2bd18735edfcf51046fadba14f85b5cf78d7112/src/types/utils.cpp#L161
+[vte-src]: https://gitlab.gnome.org/GNOME/vte/-/blob/86074ccede977bf2a594b781821c4a80c0343872/src/vtetypes.cc#L48
+[vte-src-2]: https://gitlab.gnome.org/GNOME/vte/-/blob/86074ccede977bf2a594b781821c4a80c0343872/src/vteseq.cc#L1388
 
 
 ## Questions
