@@ -13,6 +13,11 @@ jumping off point to the different PRs / issues.
 * (PR) [delta]: [Detect Dark/Light Mode from Terminal][delta-pr]
 * (PR) [bat]: [Choose Theme Based on The Terminal's Color Scheme](https://github.com/sharkdp/bat/pull/2896)
 
+## Things to Investigate
+* zellij
+  * Had issues with termbg: https://github.com/zellij-org/zellij/issues/538
+  * Currently does not detect the color scheme
+  * In my case sometimes reported white as fg and sometimes black?
 
 [bat]: https://github.com/sharkdp/bat
 [delta]: https://github.com/dandavison/delta
